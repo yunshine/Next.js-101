@@ -1,12 +1,22 @@
-const Index = () => {
-  console.log('running index...');
-  return (
-    <div>
-      <h1>the index page...</h1>
-    </div>
-  );
-};
+import React, { Component } from 'react';
+
+class Index extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  componentDidMount() {
+    console.log('Fetching Data in componentDidMount...');
+  }
+
+  render() {
+    console.log('running index page...');
+    return (
+      <div>
+        <h1>the index page...</h1>
+      </div>
+    );
+  }
+}
 
 export default Index;
-
-// npm run start    =>  this will start the server; then use localhost3000...
