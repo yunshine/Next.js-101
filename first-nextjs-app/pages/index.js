@@ -10,7 +10,7 @@ const Index = () => {
       </Link>
       <br></br>
       <Link href='/contact'>
-        <a>Link to the Contact Page</a>
+        <button>Link to the Contact Page</button>
       </Link>
     </div>
   );
