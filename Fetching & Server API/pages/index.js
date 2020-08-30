@@ -20,11 +20,17 @@
 // }
 import axios from 'axios';
 
-const Index = () => {
-  console.log('running index page...');
+const Index = ({ posts }) => {
+  //   console.log('running index page...');
+  //   console.log(posts);
   return (
     <div>
       <h1>the index page...</h1>
+      <ul>
+        {posts.map((post) => (
+          <li key={post.id}>{post.title}</li>
+        ))}
+      </ul>
     </div>
   );
 };
@@ -36,7 +42,7 @@ Index.getInitialProps = async (ctx) => {
   const { data } = res;
   console.log(data[0]);
   console.log('Get initialsdkjfalkdjflaskd');
-  return {};
+  return { posts: data };
 };
 
 export default Index;
