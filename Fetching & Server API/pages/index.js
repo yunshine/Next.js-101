@@ -3,7 +3,10 @@ import React, { Component } from 'react';
 class Index extends Component {
   constructor(props) {
     super(props);
-    console.log('Fetching Data in the constructor...');
+  }
+
+  static async getInitialProps(ctx) {
+    return { res: console.log('Fetched in get initial props') };
   }
 
   render() {
