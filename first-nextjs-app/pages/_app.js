@@ -19,7 +19,6 @@ class MyApp extends App {
     const { Component, pageProps } = this.props;
     return (
       <>
-        <h1>testing...</h1>
         <NavBar />
         <Component {...pageProps} />
       </>
