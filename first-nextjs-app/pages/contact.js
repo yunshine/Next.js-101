@@ -1,4 +1,5 @@
 const ContactPage = () => {
+  console.log('running contact...');
   return (
     <div>
       <h1>this is the Contact page...</h1>
