@@ -30,7 +30,11 @@ const Index = () => {
 };
 
 Index.getInitialProps = async (ctx) => {
-  // https://jsonplaceholder.typicode.com/users/1/posts
+  const res = await axios.get(
+    'https://jsonplaceholder.typicode.com/users/1/posts'
+  );
+  const { data } = res;
+  console.log(data[0]);
   console.log('Get initialsdkjfalkdjflaskd');
   return {};
 };
