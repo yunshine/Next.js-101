@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Link from 'next/link';
 import axios from 'axios';
 
 class Index extends Component {
@@ -22,7 +23,11 @@ class Index extends Component {
         <h1>the index page...</h1>
         <ul>
           {posts.map((post) => (
-            <li key={post.id}>{post.title}</li>
+            <li key={post.id}>
+              <Link href={`/post?id=${post.id}`}>
+                <a>{post.title}</a>
+              </Link>
+            </li>
           ))}
         </ul>
       </div>
