@@ -4,7 +4,9 @@ const ContactPage = () => {
     <div>
       <h1>this is the Contact page...</h1>
       <br></br>
-      <h1>But really... don't ever contact me...</h1>
+      <h1>But really... please don't contact me...</h1>
+      <br></br>
+      <h1>...unless you came looking for chickens or lions...</h1>
     </div>
   );
 };

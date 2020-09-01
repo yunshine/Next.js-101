@@ -12,8 +12,13 @@ app.prepare().then(() => {
     // This tells it to parse the query portion of the URL.
     const parsedUrl = parse(req.url, true);
     const { pathname, query } = parsedUrl;
-
-    handle(req, res, parsedUrl);
+    if (pathname === '/chicken') {
+      app.render(req, res, '/contact', query);
+    } else if (pathname === '/lion') {
+      app.render(req, res, '/contact', query);
+    } else {
+      handle(req, res, parsedUrl);
+    }
 
     // if (pathname === '/a') {
     //   app.render(req, res, '/a', query);
